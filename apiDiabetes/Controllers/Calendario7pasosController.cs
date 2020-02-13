@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using apiDiabetes.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 
 namespace apiDiabetes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class Calendario7pasosController : ControllerBase
     {
-        private readonly dbContext _context;
+        private readonly dbDiabetesContext _context;
 
-        public Calendario7pasosController(dbContext context)
+        public Calendario7pasosController(dbDiabetesContext context)
         {
             _context = context;
         }

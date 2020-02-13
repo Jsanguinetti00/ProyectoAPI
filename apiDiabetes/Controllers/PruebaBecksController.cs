@@ -13,9 +13,9 @@ namespace apiDiabetes.Controllers
     [ApiController]
     public class PruebaBecksController : ControllerBase
     {
-        private readonly dbContext _context;
+        private readonly dbDiabetesContext _context;
 
-        public PruebaBecksController(dbContext context)
+        public PruebaBecksController(dbDiabetesContext context)
         {
             _context = context;
         }

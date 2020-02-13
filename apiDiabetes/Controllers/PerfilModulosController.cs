@@ -13,9 +13,9 @@ namespace apiDiabetes.Controllers
     [ApiController]
     public class PerfilModulosController : ControllerBase
     {
-        private readonly dbContext _context;
+        private readonly dbDiabetesContext _context;
 
-        public PerfilModulosController(dbContext context)
+        public PerfilModulosController(dbDiabetesContext context)
         {
             _context = context;
         }

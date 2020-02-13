@@ -13,9 +13,9 @@ namespace apiDiabetes.Controllers
     [ApiController]
     public class ElementosController : ControllerBase
     {
-        private readonly dbContext _context;
+        private readonly dbDiabetesContext _context;
 
-        public ElementosController(dbContext context)
+        public ElementosController(dbDiabetesContext context)
         {
             _context = context;
         }

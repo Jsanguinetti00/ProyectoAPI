@@ -13,9 +13,9 @@ namespace apiDiabetes.Controllers
     [ApiController]
     public class DatosCitasController : ControllerBase
     {
-        private readonly dbContext _context;
+        private readonly dbDiabetesContext _context;
 
-        public DatosCitasController(dbContext context)
+        public DatosCitasController(dbDiabetesContext context)
         {
             _context = context;
         }
