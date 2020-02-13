@@ -30,7 +30,7 @@ namespace apiDiabetes
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<dbDiabetesContext>(options =>
+            services.AddDbContext<dbContext>(options =>
   options.UseSqlServer(Configuration.GetConnectionString("BloggingDatabase")));
 
             //services.AddIdentity<DbContext, IdentityRole>().AddEntityFrameworkStores<DbContext>().AddDefaultTokenProviders();
@@ -40,7 +40,7 @@ namespace apiDiabetes
                 Title="Api Diabetes"
             }));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
-            
+
 
         }
 
@@ -59,7 +59,7 @@ namespace apiDiabetes
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            app.UseAuthentication();
+
             app.UseSwagger();
             app.UseSwaggerUI(config => config.SwaggerEndpoint("/swagger/v1/swagger.json","Api proyecto Diabetes"));
 
