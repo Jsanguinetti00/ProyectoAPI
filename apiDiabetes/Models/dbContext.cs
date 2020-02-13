@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace apiDiabetes.Models
 {
-    public partial class dbDiabetesContext : DbContext
+    public partial class dbContext : DbContext
     {
-        public dbDiabetesContext()
+        public dbContext()
         {
         }
 
-        public dbDiabetesContext(DbContextOptions<dbDiabetesContext> options)
+        public dbContext(DbContextOptions<dbContext> options)
             : base(options)
         {
         }
@@ -43,8 +43,8 @@ namespace apiDiabetes.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-GBFFEJ9;Initial Catalog=dbDiabetes;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+
+                optionsBuilder.UseSqlServer("workstation id=dbDiabetes.mssql.somee.com;packet size=4096;user id=jsanguinetti_SQLLogin_1;pwd=mas8fb53wi;data source=dbDiabetes.mssql.somee.com;persist security info=False;initial catalog=dbDiabetes");
             }
         }
 

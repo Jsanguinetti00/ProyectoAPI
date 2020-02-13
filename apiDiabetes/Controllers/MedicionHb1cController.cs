@@ -13,9 +13,9 @@ namespace apiDiabetes.Controllers
     [ApiController]
     public class MedicionHb1cController : ControllerBase
     {
-        private readonly dbDiabetesContext _context;
+        private readonly dbContext _context;
 
-        public MedicionHb1cController(dbDiabetesContext context)
+        public MedicionHb1cController(dbContext context)
         {
             _context = context;
         }
